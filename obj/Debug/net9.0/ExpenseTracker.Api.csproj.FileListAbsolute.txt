@@ -284,3 +284,4 @@ C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker
 C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\obj\Debug\net9.0\ExpenseTracker.Api.pdb
 C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\obj\Debug\net9.0\ExpenseTracker.Api.genruntimeconfig.cache
 C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\obj\Debug\net9.0\ref\ExpenseTracker.Api.dll
+C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\obj\Debug\net9.0\ExpenseTracker.Api.sourcelink.json
