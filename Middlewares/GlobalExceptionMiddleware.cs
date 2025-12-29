@@ -36,7 +36,7 @@ namespace ExpenseTracker.Api.Middlewares
             int statusCode)
         {
             context.Response.ContentType = "application/json";
-
+            Console.WriteLine(context);
             var response = new ApiResponse<object>()
             {
                 Data = null,
