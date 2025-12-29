@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ExpenseTracker.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251219085519_update-date-time")]
-    partial class updatedatetime
+    [Migration("20251229112633_updatedSchema")]
+    partial class updatedSchema
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,6 +69,10 @@ namespace ExpenseTracker.Api.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ColorCode")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -96,6 +100,7 @@ namespace ExpenseTracker.Api.Migrations
                         new
                         {
                             Id = 1,
+                            ColorCode = "#22C55E",
                             CreatedAt = new DateTimeOffset(new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             IsDefault = true,
                             Name = "food",
@@ -104,6 +109,7 @@ namespace ExpenseTracker.Api.Migrations
                         new
                         {
                             Id = 2,
+                            ColorCode = "#3B82F6",
                             CreatedAt = new DateTimeOffset(new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             IsDefault = true,
                             Name = "travel",
@@ -112,6 +118,7 @@ namespace ExpenseTracker.Api.Migrations
                         new
                         {
                             Id = 3,
+                            ColorCode = "#A855F7",
                             CreatedAt = new DateTimeOffset(new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             IsDefault = true,
                             Name = "shopping",
@@ -120,6 +127,7 @@ namespace ExpenseTracker.Api.Migrations
                         new
                         {
                             Id = 4,
+                            ColorCode = "#10B981",
                             CreatedAt = new DateTimeOffset(new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             IsDefault = true,
                             Name = "salary",
@@ -128,6 +136,7 @@ namespace ExpenseTracker.Api.Migrations
                         new
                         {
                             Id = 5,
+                            ColorCode = "#F97316",
                             CreatedAt = new DateTimeOffset(new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             IsDefault = true,
                             Name = "bills",
@@ -136,6 +145,7 @@ namespace ExpenseTracker.Api.Migrations
                         new
                         {
                             Id = 6,
+                            ColorCode = "#6B7280",
                             CreatedAt = new DateTimeOffset(new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             IsDefault = true,
                             Name = "other",
@@ -163,8 +173,8 @@ namespace ExpenseTracker.Api.Migrations
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<DateTimeOffset>("Date")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTimeOffset?>("DeletedDate")
                         .HasColumnType("timestamp with time zone");
