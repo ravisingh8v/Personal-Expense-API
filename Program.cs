@@ -15,6 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 // ---------- Configure Npgsql legacy timestamp behavior (Postgres) ----------
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
+builder.WebHost.UseUrls("http://0.0.0.0:" +
+    (Environment.GetEnvironmentVariable("PORT") ?? "8080"));
 
 // ----------  Add configuration + connection string ----------
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
