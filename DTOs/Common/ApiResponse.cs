@@ -4,6 +4,7 @@ namespace ExpenseTracker.Api.DTOs.Common
     public class ApiResponse<T>
     {
         public T? Data { get; set; }
+        public T? Context { get; set; }
         public ApiError? Error { get; set; } = null;
 
         public static ApiResponse<T> Success(T data)

@@ -40,6 +40,7 @@ namespace ExpenseTracker.Api.Middlewares
             var response = new ApiResponse<object>()
             {
                 Data = null,
+                Context = context,
                 Error = new ApiError
                 {
                     Message = message,
