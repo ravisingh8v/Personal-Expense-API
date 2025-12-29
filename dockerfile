@@ -3,9 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
 
 # copy csproj and restore
-COPY ExpenseTracker.Api.sln ./
-COPY ExpenseTracker.Api/*.csproj ./ExpenseTracker.Api/
-RUN dotnet restore ExpenseTracker.Api/ExpenseTracker.Api.csproj
+COPY *.csproj ./
+RUN dotnet restore
 
 # copy everything else
 COPY . ./
@@ -18,8 +17,8 @@ WORKDIR /app
 COPY --from=build /app/out .
 
 # Railway sets PORT automatically
-ENV ASPNETCORE_URLS=http://0.0.0.0:$PORT
+ENV ASPNETCORE_URLS=http://0.0.0.0:${PORT}
 
 EXPOSE 8080
 
-ENTRYPOINT ["dotnet", "ExpenseTracker.Api"]
+ENTRYPOINT ["dotnet", "ExpenseTracker.Api.dll"]
