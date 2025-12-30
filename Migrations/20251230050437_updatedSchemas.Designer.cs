@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ExpenseTracker.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251229112633_updatedSchema")]
-    partial class updatedSchema
+    [Migration("20251230050437_updatedSchemas")]
+    partial class updatedSchemas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

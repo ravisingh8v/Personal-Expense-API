@@ -285,3 +285,10 @@ C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker
 C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\obj\Debug\net9.0\ExpenseTracker.Api.genruntimeconfig.cache
 C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\obj\Debug\net9.0\ref\ExpenseTracker.Api.dll
 C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\obj\Debug\net9.0\ExpenseTracker.Api.sourcelink.json
+C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\bin\Debug\net9.0\out\web.config
+C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\bin\Debug\net9.0\out\appsettings.Development.json
+C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\bin\Debug\net9.0\out\appsettings.json
+C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\bin\Debug\net9.0\out\appsettings.Production.json
+C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\bin\Debug\net9.0\out\ExpenseTracker.Api.deps.json
+C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\bin\Debug\net9.0\out\ExpenseTracker.Api.runtimeconfig.json
+C:\Users\RaviSingh\Desktop\Desktop Files\DotNet\ExpenseTrackerApp\ExpenseTracker.Api\bin\Debug\net9.0\out\ExpenseTracker.Api.staticwebassets.endpoints.json

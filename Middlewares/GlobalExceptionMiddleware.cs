@@ -25,7 +25,7 @@ namespace ExpenseTracker.Api.Middlewares
             {
                 _logger.LogError(ex, ex.Message);
                 context.Response.StatusCode = StatusCodes.Status500InternalServerError;
-                await WriteError(context, $"Something went wrong. Please try again later.{ex}", StatusCodes.Status500InternalServerError);
+                await WriteError(context, $"Something went wrong. Please try again later.", StatusCodes.Status500InternalServerError);
             }
 
 

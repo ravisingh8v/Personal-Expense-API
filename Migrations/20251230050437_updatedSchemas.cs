@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ExpenseTracker.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class updatedSchema : Migration
+    public partial class updatedSchemas : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
