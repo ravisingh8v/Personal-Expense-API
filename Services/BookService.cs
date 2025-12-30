@@ -17,6 +17,7 @@ namespace ExpenseTracker.Api.Services
             var books = await _db.Books
                 .Include(b => b.Expenses)
                 .Where(b => b.UserId == userId)
+                .OrderByDescending(b => b.CreatedAt)
                 .ToListAsync();
 
             // Auto-calc totals
