@@ -78,6 +78,13 @@ builder.Services.AddCors(
               .AllowCredentials()
               .WithOrigins("http://localhost:3000", "http://localhost:5173", "http://localhost:4200", "http://192.168.1.7:4200");
     });
+    options.AddPolicy("ProdCors", policy =>
+    {
+        policy.AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials()
+              .WithOrigins("https://pet-finance.vercel.app", "https://personal-expense-tracker-kappa-dusky.vercel.app");
+    });
 }
 );
 
@@ -202,11 +209,16 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors("DevCors");
+}
+
+if (app.Environment.IsProduction())
+{
+    app.UseCors("ProdCors");
 }
 
 // app.UseHttpsRedirection();
 
-app.UseCors("DevCors");
 
 app.UseMiddleware<GlobalExceptionMiddleware>();
 
